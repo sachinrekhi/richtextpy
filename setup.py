@@ -6,7 +6,12 @@ setup(
 	url='http://github.com/sachinrekhi/richtextpy',
 	description='An operational transformation library for rich text documents',
 	keywords='operational transformation type rich text',
+	classifiers=[
+		'Programming Language :: Python :: 2.7',
+		'License :: OSI Approved :: MIT License',
+	],
 	author='Sachin Rekhi',
+	author_email='sachin.rekhi@gmail.com',
 	license='MIT',
 	packages=['richtextpy'],
 	install_requires=[
