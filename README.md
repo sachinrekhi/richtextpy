@@ -44,12 +44,16 @@ composed is now:
 ```
 
 ## Installation
-```python
+```
+pip install richtextpy
+
+OR
+
 python setup.py install
 ```
 
 ## Running Tests
-```python
+```
 python setup.py test
 ```
 
