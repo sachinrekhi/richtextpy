@@ -53,7 +53,7 @@ python setup.py test
 
 ## API Reference
 
-Fully implements the original [ottypes/richtext](https://github.com/ottypes/rich-text) interface. So feel free to use their [API reference](https://github.com/ottypes/rich-text).
+Fully implements the original [ottypes/rich-text](https://github.com/ottypes/rich-text) interface. So feel free to use their [API reference](https://github.com/ottypes/rich-text).
 
 ## References
 - [High-Latency, Low-Bandwidth Windowing in the Jupiter Collaboration System, 1995](http://lively-kernel.org/repository/webwerkstatt/projects/Collaboration/paper/Jupiter.pdf)
