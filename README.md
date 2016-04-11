@@ -1,6 +1,6 @@
 # richtextpy
 
-An [operational transformation](https://en.wikipedia.org/wiki/Operational_transformation) library for rich text documents. Enables collaborative editing scenarios by providing a rich text document format as well as **compose()** and **transform()** methods for managing concurrent changes.
+An [operational transformation](https://en.wikipedia.org/wiki/Operational_transformation) library for rich text documents. It enables collaborative editing scenarios by providing a rich text document format as well as **compose()** and **transform()** methods for managing concurrent changes according to the [OT](https://en.wikipedia.org/wiki/Operational_transformation) algorithm.
 
 This is a Python version of the [Javascript Rich Text](https://github.com/ottypes/rich-text) ottype.
 
@@ -10,33 +10,33 @@ This is a Python version of the [Javascript Rich Text](https://github.com/ottype
 from richtextpy import Delta
 
 delta = Delta([
-  {'insert': 'Gandalf', 'attributes': {'bold': True}},
-  {'insert': ' the '},
-  {'insert': 'Grey', 'attributes': {'color': '#ccc'}}
+  {'insert': 'The quick '},
+  {'insert': 'brown', 'attributes': {'color': 'brown'}},
+  {'insert': ' fox'}
 ])
 
-# keep the first 12 characters, delete the next 4, and insert a white 'White'
-death = Delta().retain(12).insert('White', {'color': '#fff'}).delete(4)
+# keep the first 10 characters, delete the next 5, and insert a red 'red'
+change = Delta().retain(10).delete(5).insert('red', {'color': 'red'})
 
 """
 this produces:
 
 [
-	{'retain': 12 },
-	{'insert': 'White', 'attributes': {'color': '#fff'}},
-	{'delete': 4 }
+	{'retain': 10},
+	{'delete': 5},
+	{'insert': 'red', 'attributes': {'color': 'red'}},
 ]
 """
 
-delta.compose(death)
+delta.compose(change)
 
 """
 delta is now:
 
 [
-	{'insert': 'Gandalf ', 'attributes': {'bold': True}},
-	{'insert': ' the '},
-	{'insert': 'White', 'attributes': {'color': '#fff'}}
+  {'insert': 'The quick '},
+  {'insert': 'red', 'attributes': {'color': 'red'}},
+  {'insert': ' fox'}
 ]
 """
 ```
@@ -50,6 +50,12 @@ python setup.py install
 ```python
 python setup.py test
 ```
+
+## References
+- [High-Latency, Low-Bandwidth Windowing in the Jupiter Collaboration System, 1995](http://lively-kernel.org/repository/webwerkstatt/projects/Collaboration/paper/Jupiter.pdf)
+- [Google Wave Operational Transformation, 2010](http://wave-protocol.googlecode.com/hg/whitepapers/operational-transform/operational-transform.html)
+- [Wikipedia: Operational Transformation](https://en.wikipedia.org/wiki/Operational_transformation)
+- [ottypes/rich-text](https://github.com/ottypes/rich-text)
 
 ## License
 
