@@ -2,7 +2,7 @@
 
 An [operational transformation](https://en.wikipedia.org/wiki/Operational_transformation) library for rich text documents. It enables optimistic conflict-free collaborative editing scenarios (like [Google Docs](http://docs.google.com)) by providing a rich text document format as well as **compose()** and **transform()** methods for managing changes according to the [OT](https://en.wikipedia.org/wiki/Operational_transformation) algorithm.
 
-This is a Python version of the [Javascript Rich Text](https://github.com/ottypes/rich-text) ottype.
+This is a Python version of the [Javascript Rich Text](https://github.com/ottypes/rich-text) ottype and can be used in conjunction to support both client-side and server-side operations.
 
 To fully support collaborative editing, you'll also need a rich text editor that produces Delta objects on user changes as well as a server that implements the full [OT](https://en.wikipedia.org/wiki/Operational_transformation) collaboration protocol. See the references for details on the protocol and some libraries that provide these additional capabilities.
 
@@ -79,7 +79,7 @@ Fully implements the original [ottypes/rich-text](https://github.com/ottypes/ric
 
 The MIT License (MIT)
 
-Copyright (c) 2016 Sachin Rekhi
+Copyright (c) 2016 [Sachin Rekhi](http://www.sachinrekhi.com)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
