@@ -30,10 +30,10 @@ this produces:
 ]
 """
 
-delta.compose(change)
+composed = delta.compose(change)
 
 """
-delta is now:
+composed is now:
 
 [
   {'insert': 'The quick '},
