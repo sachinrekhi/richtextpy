@@ -1,6 +1,8 @@
 # richtextpy
 
-An [operational transformation](https://en.wikipedia.org/wiki/Operational_transformation) library for rich text documents. It enables collaborative editing scenarios by providing a rich text document format as well as **compose()** and **transform()** methods for managing concurrent changes according to the [OT](https://en.wikipedia.org/wiki/Operational_transformation) algorithm.
+An [operational transformation](https://en.wikipedia.org/wiki/Operational_transformation) library for rich text documents. It enables optimistic conflict-free collaborative editing scenarios by providing a rich text document format as well as **compose()** and **transform()** methods for managing changes according to the [OT](https://en.wikipedia.org/wiki/Operational_transformation) algorithm.
+
+To fully support collaborative editing, you'll also need a rich text editor that produces Delta objects on user changes as well as a server that implements the full [OT](https://en.wikipedia.org/wiki/Operational_transformation) collaboration protocol. See the references for details on the protocol and some libraries that provide these additional pieces.
 
 This is a Python version of the [Javascript Rich Text](https://github.com/ottypes/rich-text) ottype.
 
@@ -60,6 +62,8 @@ Fully implements the original [ottypes/rich-text](https://github.com/ottypes/ric
 - [Google Wave Operational Transformation, 2010](http://wave-protocol.googlecode.com/hg/whitepapers/operational-transform/operational-transform.html)
 - [Wikipedia: Operational Transformation](https://en.wikipedia.org/wiki/Operational_transformation)
 - [ottypes/rich-text](https://github.com/ottypes/rich-text)
+- [Quill Rich Text Editor](https://github.com/quilljs/quill/) - WYSIWYG Javascript Editor that products Delta objects on user changes
+- [ShareJS](https://github.com/share/ShareJS) - NodeJS server that implements OT collaboration protocol
 
 ## License
 
