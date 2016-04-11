@@ -2,7 +2,7 @@
 
 An [operational transformation](https://en.wikipedia.org/wiki/Operational_transformation) library for rich text documents.
 
-This is a Python-port of the [Javascript Rich-Text ottype](https://github.com/ottypes/rich-text).
+This is a Python-port of the [Javascript Rich-Text library](https://github.com/ottypes/rich-text).
 
 ## Example
 
@@ -20,6 +20,7 @@ death = Delta().retain(12).insert('White', {'color': '#fff'}).delete(4)
 
 """
 this produces:
+
 [
 	{'retain': 12 },
 	{'insert': 'White', 'attributes': {'color': '#fff'}},
@@ -31,12 +32,18 @@ delta.compose(death)
 
 """
 delta is now:
+
 [
 	{'insert': 'Gandalf ', 'attributes': {'bold': True}},
 	{'insert': ' the '},
 	{'insert': 'White', 'attributes': {'color': '#fff'}}
 ]
 """
+```
+
+## Running the tests
+```python
+python setup.py test
 ```
 
 ## License
