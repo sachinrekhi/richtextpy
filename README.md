@@ -56,6 +56,9 @@ OR
 python setup.py install
 ```
 
+## Dependencies
+Requires Google's [diff-match-patch](https://code.google.com/archive/p/google-diff-match-patch/) library, which is automatically installed during installation.
+
 ## Running Tests
 ```
 (from GitHub source download directory)
