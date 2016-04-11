@@ -1,8 +1,8 @@
 # richtextpy
 
-An [operational transformation](https://en.wikipedia.org/wiki/Operational_transformation) library for rich text documents.
+An [operational transformation](https://en.wikipedia.org/wiki/Operational_transformation) library for rich text documents, suitable for supporting collaborative editing scenarios by providing core *compose* and *transform* methods.
 
-This is a Python-port of the [Javascript Rich-Text library](https://github.com/ottypes/rich-text).
+This is a Python version of the [Javascript Rich Text](https://github.com/ottypes/rich-text) library.
 
 ## Example
 
