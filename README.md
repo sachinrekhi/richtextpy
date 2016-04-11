@@ -1,6 +1,6 @@
 # richtextpy
 
-An [operational transformation](https://en.wikipedia.org/wiki/Operational_transformation) library for rich text documents, suitable for supporting collaborative editing scenarios by providing core *compose* and *transform* methods.
+An [operational transformation](https://en.wikipedia.org/wiki/Operational_transformation) library for rich text documents, suitable for enabling collaborative editing scenarios by providing **compose** and **transform** capabilities.
 
 This is a Python version of the [Javascript Rich Text](https://github.com/ottypes/rich-text) library.
 
@@ -39,6 +39,11 @@ delta is now:
 	{'insert': 'White', 'attributes': {'color': '#fff'}}
 ]
 """
+```
+
+## Installation
+```python
+python setup.py install
 ```
 
 ## Running the tests
