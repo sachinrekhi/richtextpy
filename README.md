@@ -1,6 +1,6 @@
 # richtextpy
 
-An [operational transformation](https://en.wikipedia.org/wiki/Operational_transformation) library for rich text documents. It enables optimistic conflict-free collaborative editing scenarios (like Google Docs) by providing a rich text document format as well as **compose()** and **transform()** methods for managing changes according to the [OT](https://en.wikipedia.org/wiki/Operational_transformation) algorithm.
+An [operational transformation](https://en.wikipedia.org/wiki/Operational_transformation) library for rich text documents. It enables optimistic conflict-free collaborative editing scenarios (like [Google Docs](http://docs.google.com)) by providing a rich text document format as well as **compose()** and **transform()** methods for managing changes according to the [OT](https://en.wikipedia.org/wiki/Operational_transformation) algorithm.
 
 This is a Python version of the [Javascript Rich Text](https://github.com/ottypes/rich-text) ottype.
 
