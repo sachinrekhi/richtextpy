@@ -21,7 +21,7 @@ delta = Delta([
 change = Delta().retain(10).delete(5).insert('red', {'color': 'red'})
 
 """
-this produces:
+change is:
 
 [
 	{'retain': 10},
@@ -33,7 +33,7 @@ this produces:
 composed = delta.compose(change)
 
 """
-composed is now:
+composed is:
 
 [
   {'insert': 'The quick '},
