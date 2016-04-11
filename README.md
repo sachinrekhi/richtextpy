@@ -45,15 +45,21 @@ composed is now:
 
 ## Installation
 ```
+(install from Pypi)
+
 pip install richtextpy
 
 OR
+
+(install from GitHub source download)
 
 python setup.py install
 ```
 
 ## Running Tests
 ```
+(from GitHub source download directory)
+
 python setup.py test
 ```
 
