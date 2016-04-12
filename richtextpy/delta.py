@@ -7,7 +7,7 @@ Copyright (c) 2016 Sachin Rekhi
 from copy import deepcopy
 from diff_match_patch import diff_match_patch
 from type_utils import is_list, is_string, is_dict, is_number, INFINITY
-from op import op_length, op_clone, op_insert_string, attr_compose, attr_transform, attr_diff
+from op import op_length, op_insert_string, attr_compose, attr_transform, attr_diff
 from opiterator import OpIterator
 
 
@@ -68,7 +68,7 @@ class Delta(object):
 		# this requires combining same operation types when possible
 		# and re-ordering same-index inserts and deletes to ensure canonical order
 
-		new_op = op_clone(op)
+		new_op = deepcopy(op)
 
 		# if no existing ops, simply add new_op
 		if len(self.ops) == 0:

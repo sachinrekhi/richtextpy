@@ -68,14 +68,14 @@ python setup.py test
 
 ## API Reference
 
-Fully implements the original [ottypes/rich-text](https://github.com/ottypes/rich-text) interface. So feel free to use their [API reference](https://github.com/ottypes/rich-text).
+Fully implements the original [ottypes/rich-text](https://github.com/ottypes/rich-text) interface. So feel free to use its [API reference](https://github.com/ottypes/rich-text).
 
 ## References
 - [High-Latency, Low-Bandwidth Windowing in the Jupiter Collaboration System, 1995](http://lively-kernel.org/repository/webwerkstatt/projects/Collaboration/paper/Jupiter.pdf)
 - [Google Wave Operational Transformation, 2010](http://wave-protocol.googlecode.com/hg/whitepapers/operational-transform/operational-transform.html)
 - [Wikipedia: Operational Transformation](https://en.wikipedia.org/wiki/Operational_transformation)
 - [ottypes/rich-text](https://github.com/ottypes/rich-text)
-- [Quill Rich Text Editor](https://github.com/quilljs/quill/) - WYSIWYG Javascript Editor that products Delta objects on user changes
+- [Quill Rich Text Editor](https://github.com/quilljs/quill/) - WYSIWYG Javascript Editor that produces Delta objects on changes
 - [ShareJS](https://github.com/share/ShareJS) - NodeJS server that implements the OT collaboration protocol
 
 ## License

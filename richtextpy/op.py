@@ -15,19 +15,6 @@ def op_length(op):
 	elif 'retain' in op:
 		return op['retain']
 
-def op_clone(op):
-	if not is_dict(op):
-		return dict()
-
-	cloned_op = deepcopy(op)
-	
-	# remove top-level null keys
-	for key in cloned_op:
-		if cloned_op[key] == None:
-			del cloned_op[key]
-
-	return cloned_op
-
 def op_insert_string(op):
 	if 'insert' in op:
 		if is_string(op['insert']):
@@ -37,26 +24,22 @@ def op_insert_string(op):
 
 	raise Exception('Diff called on a non-document')
 
-def attr_clone(attributes, keep_null):
-	if not is_dict(attributes):
-		return dict()
-
-	cloned_attributes = dict()
-	for key in attributes.keys():
-		if (attributes[key] != None) or keep_null:
-			cloned_attributes[key] = attributes[key]
-
-	return cloned_attributes
-
 def attr_compose(a, b, keep_null):
 	if not is_dict(a):
 		a = dict()
 	if not is_dict(b):
 		b = dict()
-	attributes = attr_clone(b, keep_null)
+
+	attributes = deepcopy(b)
+	if not keep_null:
+		for key in attributes.keys():
+			if attributes[key] == None:
+				del attributes[key]
+
 	for key in a.keys():
 		if key not in b:
 			attributes[key] = a[key]
+	
 	if len(attributes.keys()) > 0:
 		return attributes
 	else:

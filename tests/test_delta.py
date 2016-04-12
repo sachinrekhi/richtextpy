@@ -571,6 +571,14 @@ class TestDelta(TestCase):
 		expected = Delta().insert({'image': 'http://quilljs.com'}).delete(1)
 		self.assertEqual(a.diff(b), expected)
 
+		# embed object change
+		embed = {'image': 'http://quilljs.com'}
+		a = Delta().insert(embed)
+		embed['image'] = 'http://github.com'
+		b = Delta().insert(embed)
+		expected = Delta().insert({'image': 'http://github.com'}).delete(1)
+		self.assertEqual(a.diff(b), expected)
+
 		# embed false positive
 		a = Delta().insert(1)
 		b = Delta().insert(chr(0)) # Placeholder char for embed in diff()
