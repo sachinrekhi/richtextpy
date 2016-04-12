@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(
 	name='richtextpy',
-	version='0.1',
+	version='0.2',
 	url='http://github.com/sachinrekhi/richtextpy',
 	description='An operational transformation library for rich text documents',
 	keywords='operational transformation type rich text',
